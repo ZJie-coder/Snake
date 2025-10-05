@@ -1,0 +1,68 @@
+.game-container{
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 750px;
+  height: 700px;
+  border-radius: 3%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game-tool{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.game-score{
+  font-size: 20px;
+  font-weight:600;
+  color: rgb(44, 155, 245);
+}
+.game-name{
+  color: #504e4e;
+  width: 100px;
+  height: 50px;
+  font-size: 30px;
+  font-family: "Microsoft YaHei";
+  font-weight: 600;
+}
+.game-btn{
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn{
+  height: 40px;
+  background-color: greenyellow;  
+  border-radius: 8%;
+  opacity: 0.8;
+  cursor: pointer;
+  font-weight: 600;
+}
+.pause{
+  background-color: rgb(238, 153, 63);
+}
+.restart{
+  background-color: rgb(255, 76, 76);
+}
+.btn:hover{
+  opacity: 1;
+}
+
+.game{
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  /* background-color: #eee; */
+  border: 2px solid #504e4e;
+  border-radius: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
