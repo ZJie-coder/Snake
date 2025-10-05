@@ -2,11 +2,9 @@ import {BOX_SIZE} from './constant.js'
 //盒子类
 export default class Box {
 
-  constructor(x, y, color) {
+  constructor(color) {
     this.width = BOX_SIZE;
     this.height = BOX_SIZE;
-    this.x = x;
-    this.y = y;
     this.color = color;
   }
   render() {

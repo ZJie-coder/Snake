@@ -21,7 +21,7 @@ export default class Game {
     // 然后重新添加格子元素
     for (let i = 0; i < BOX_HEIGHT_COUNT; i++) {
       for (let j = 0; j < BOX_WIDTH_COUNT; j++) {
-        const box = new Box(i, j, '#f1f0f0ff');
+        const box = new Box('#f1f0f0ff');
         this.game.appendChild(box.render());
       }
     }
