@@ -1,8 +1,8 @@
 export const GAME_WIDTH = 500;
 export const GAME_HEIGHT = 500;
 export const BOX_SIZE = 20;
-export const BOX_WIDTH_COUNT = GAME_WIDTH / BOX_SIZE;
-export const BOX_HEIGHT_COUNT = GAME_HEIGHT / BOX_SIZE;
+export const BOX_COL_COUNT = GAME_WIDTH / BOX_SIZE;
+export const BOX_ROW_COUNT = GAME_HEIGHT / BOX_SIZE;
 export const SNAKE_BODY_COLOR = 'rgba(16, 176, 26, 0.5)';
 export const SNAKE_HEAD_COLOR = 'rgba(16, 176, 26, 1)';
 export const FOOD_COLOR = '#f00';

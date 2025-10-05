@@ -1,6 +1,6 @@
 import Snake from "./Snake.js";
 import Box from "./Box.js";
-import { BOX_HEIGHT_COUNT, BOX_WIDTH_COUNT, GAME_SPEED } from "./constant.js";
+import { BOX_ROW_COUNT, BOX_COL_COUNT, GAME_SPEED } from "./constant.js";
 
 export default class Game {
   constructor(game) {
@@ -19,8 +19,8 @@ export default class Game {
     // 先清空游戏容器
     this.game.innerHTML = '';
     // 然后重新添加格子元素
-    for (let i = 0; i < BOX_HEIGHT_COUNT; i++) {
-      for (let j = 0; j < BOX_WIDTH_COUNT; j++) {
+    for (let i = 0; i < BOX_ROW_COUNT; i++) {
+      for (let j = 0; j < BOX_COL_COUNT; j++) {
         const box = new Box('#f1f0f0ff');
         this.game.appendChild(box.render());
       }
@@ -69,7 +69,7 @@ export default class Game {
    */
   isFailed() {
     const head = this.snake.body[0];
-    if (head.x >= BOX_HEIGHT_COUNT || head.x < 0 || head.y >= BOX_WIDTH_COUNT || head.y < 0) { //出界
+    if (head.x >= BOX_ROW_COUNT || head.x < 0 || head.y >= BOX_COL_COUNT || head.y < 0) { //出界
       this.gamePlaying = false;
       clearInterval(this.id);
       this.restartGame();
@@ -131,16 +131,16 @@ export default class Game {
       return
     } else {
       do {
-        this.food.x = Math.floor(Math.random() * BOX_HEIGHT_COUNT);
-        this.food.y = Math.floor(Math.random() * BOX_WIDTH_COUNT);
+        this.food.x = Math.floor(Math.random() * BOX_ROW_COUNT);
+        this.food.y = Math.floor(Math.random() * BOX_COL_COUNT);
       } while (this.snake.body.some(box => box.x === this.food.x && box.y === this.food.y))
-      this.game.children[this.food.x * BOX_WIDTH_COUNT + this.food.y].style.backgroundColor = 'red';
+      this.game.children[this.food.x * BOX_COL_COUNT + this.food.y].style.backgroundColor = 'red';
     }
   }
 
   clearFood() {
     if (this.food.x !== null && this.food.y !== null) {
-      const foodIndex = this.food.x * BOX_WIDTH_COUNT + this.food.y;
+      const foodIndex = this.food.x * BOX_COL_COUNT + this.food.y;
       if (foodIndex >= 0) {
         this.game.children[foodIndex].style.backgroundColor = '#f1f0f0ff';
       }
